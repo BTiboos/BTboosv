@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .features {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 150px;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .links-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+        
+        .links-title {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .link-item {
+            display: block;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 10px 0;
+            background: #f8f9ff;
+            border-radius: 10px;
+            transition: all 0.3s;
+            font-size: 1.05em;
+        }
+        
+        .link-item:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .link-item::before {
+            content: "🔗 ";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎访问</h1>
+        <p>操你妈小辰</p>
+        
+        <a href="#" class="button">点击我</a>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">快速</div>
+                <div class="feature-desc">加载速度快</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">响应式</div>
+                <div class="feature-desc">适配各种设备</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <div class="feature-title">美观</div>
+                <div class="feature-desc">现代设计风格</div>
+            </div>
+        </div>
+        
+        <div class="links-section">
+            <div class="links-title">有用的链接</div>
+            <a href="https://www.baidu.com" target="_blank" class="link-item">访问百度（在新标签页打开）</a>
+            <a href="https://www.bilibili.com" target="_blank" class="link-item">访问哔哩哔哩</a>
+            <a href="mailto:example@email.com" class="link-item">发送邮件</a>
+            <a href="tel:10086" class="link-item">拨打电话（手机端可用）</a>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelector('.button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('操你妈小辰');
+        });
+    </script>
+</body>
+</html>
